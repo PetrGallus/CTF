@@ -1,4 +1,6 @@
 # NUKIB challenge
+https://nukib.github.io/salina.html
+
 
 ## Kód na stránce
 1. `NDYgNGMgNDEgNDcgMmQgNTQgNGYgNDggNGMgNDUgMmQgNGEgNDUgMmQgNGEgNDUgNGUgMmQgNWEgNDEgNDMgNDEgNTQgNDUgNGI=`
@@ -78,5 +80,5 @@ DECIMAL       HEXADECIMAL     DESCRIPTION
 
 ## Adresní řetězec
 
-1. Ještě jsem našla v zdroj kodu stránky tenhle řetězec, ale už nebyl čas něco zkoumat.
+1. Ještě jsem našel ve zdroj kodu stránky tenhle řetězec, ale už nebyl čas zkoumat ho dal...
 `\001F\008B\0008\0000\00AA\007C\0076\0061\0000\00FF\0005\0080\0041\0009\0000\0000\0008\0003\0013\0019\0042\0050\000F\00C1\00C7\00DE\00F6\000F\0032\00E6\0092\00E0\0057\00EA\0032\0005\006F\0075\00F3\000C\0000\0000\0000`
