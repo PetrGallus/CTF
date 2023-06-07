@@ -2,37 +2,54 @@
 https://nukib.github.io/salina.html
 
 
-## Kód na stránce
+## 1 Kód na stránce
 1. `NDYgNGMgNDEgNDcgMmQgNTQgNGYgNDggNGMgNDUgMmQgNGEgNDUgMmQgNGEgNDUgNGUgMmQgNWEgNDEgNDMgNDEgNTQgNDUgNGI=`
 2. CyberChef – from Base64, from HEX
 3. echo <string> | base64 -d
     
 > FLAG-TOHLE-JE-JEN-ZACATEK
 
-## Neviditelné znaky na stránce
+## 2 Neviditelné znaky na stránce
 1. Ctrl+A a je vidět vlevo nahoře, nebo vyhledávání FLAG v kódu stránky Ctrl+Shift+I
-
 
 > FLAG-PRISNE-TAJNE
 
-## Prohledání  kódu stránky
+## 3 Prohledání kódu stránky
 Ctrl+Shift+I, Ctrl+F a najít flag
 V komentáři je skryt flag
 
 > FLAG-TAKY-LEHKE
 
-## Script
+## 4 Prohledání kódu stránky 2
+Ctrl+Shift+I, Ctrl+F a najít flag
+Název CSS fontu
+
+> FLAG-ZNAS-BASE58?
+
+## 5 Menší text na konci
+1. V dolní části webu je text menším písmem o právech a povinnostech
+2. Flag je napsán přímo v něm
+
+> Flag-hledame-i-pravniky
+
+## 6 Verze stránky
+1. v patičce webu je řetězec ```Verze: 464c4147-2d4e-454e-4954-4f2d55554944```
+2. CyberChef - From Hex
+
+> FLAG-NENITO-UUID
+
+## 7 Script
 Ve stránce je skript, Brave jej automaticky provede dole v konzoli. Některé prohlížeče  - musí se zkopírovat do konzole a spustit je, pak se provedou a zobrazí výsledek
-    
+
 > FLAG-OBFUSKACE
 
-## PS obfuskace
+## 8 PS obfuskace
 1. Komentář v HTML: `KCgiezR9ezJ9ezV9ezZ9ezB9ezF9ezN9Ii1mJ1BTT0JGVVMnLCdDQVRFRF9GJywncicsJ0xBR30nLCdXJywnaXRlLScsJ2hvc3QgRkxBR3tUSElTX0lTXycpKSB8ICYoKGdWICcqTWRyKicpLk5BbUVbMywxMSwyXS1KT0luJycp`
 2. CyberChef – from Base64
 (("{4}{2}{5}{6}{0}{1}{3}"-f'PSOBFUS','CATED_F','r','LAG}','W','ite-','host FLAG{THIS_IS_')) | &((gV '*Mdr*').NAmE[3,11,2]-JOIn'')
 3. Stačí takhle celé rovnou nakopírovat do powershellu a spustit. 
 
-> FLAG THIS_IS_PSOBFUSCATED_FLAG
+> FLAG{THIS_IS_PSOBFUSCATED_FLAG}
 
 > Jedná se jen o zpřeházení řetězců podle pořadí v závorkách, takže lze i ručně,
 > 0 je PSOBFUS
@@ -46,7 +63,7 @@ Ve stránce je skript, Brave jej automaticky provede dole v konzoli. Některé p
 > Write-host FLAG{THIS_IS_PSOBFUSCATED_FLAG}
 > Po provedení příkazu v shelllu Write-host FLAG{THIS_IS_PSOBFUSCATED_FLAG} je výsledek stejný
 
-## Logo
+## 9 Logo
 1. Logo-kariera2.png metadata
 2. Obrázkem najedu na ikonu programu exiftool.exe a pokud je název ve tvaru exiftool(-a -u -g1 -w txt).exe, tak mi nalezená metadata uloží do .txt se stejným názvem, jako je prověřovaný soubor.
 3. V linuxu je příkaz
@@ -59,7 +76,7 @@ $ Strings ./logo-kariera2.png > strings.txt (výpis nezobrazí ale uloží do so
 
 >FLAG-Heslo-k-archivu-je-TakTrochuJinaStatniSprava
 
-## Logo2
+## 10 Logo2
 1. Logo-kariera2.png. vnořený zaheslovaný zip
 2. Příkaz v linuxu pro prověření obsahu souboru 
     `$ binwalk ./logo-kariera2.png` a pak uvidíme, že je tam .zip a v něm je soubor flag.txt
@@ -77,8 +94,47 @@ DECIMAL       HEXADECIMAL     DESCRIPTION
     
 > FLAG-Posli-zivotopis-na-analyticke-oddeleni
 
+## 11 Mini-ikona stránky
+1. Obsah faviconu loga na stránce
+2. F12 - Cources - 7. řádek 
+    ```content="https://repository-images.githubusercontent.com/205122635/b416e9be-414e-44b3-a1ac-a3729edfe572"```
+3. Otevřít nalezenou URL a stáhnout mini-ikonu stránky
 
-## Adresní řetězec
+> FLAG-FAVICON
+
+## 12 PGP signature
+1. na web je nahraná složka .well-known, jejíž obsahem je soubor "security.txt" (https://github.com/NUKIB/nukib.github.io/blob/master/.well-known/security.txt)
+2. PGP podpis obsahuje flag
+```-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+Contact: mailto:cert@nukib.cz
+Encryption: https://www.nukib.cz/download/kontakty/cert_pub.asc
+Hiring: https://kariera.nukib.cz
+Preferred-Languages: cs, en
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.6 (MingW32)
+aW1wb3J0IGJhc2U2NAoKZGVmIGhleF90b19iYXNlNjQoZGF0YTogc3RyKSAtPiBzdHI6CglyYWlz
+ZSBOb3RJbXBsZW1lbnRlZEVycm9yCgpkZWYgYmFzZTY0X3RvX3N0cmluZyhkYXRhOiBzdHIpIC0+
+IHN0cjoKCXJhaXNlIE5vdEltcGxlbWVudGVkRXJyb3IKCmZsYWdfZW5jb2RlZCA9ICc1MjZiNzg0
+MjUyMzM3NDRmNTY1NTc0NGE1MTY5MzE1MTU1NmI0NjQ0NTI1MzMwNzc0ZDQ0NjQzOScKCg==
+-----END PGP SIGNATURE-----
+```
+3. Dekódování řetězce pomocí Base64 -> flag_encoded = '526b78425233744f5655744a51693151556b4644525330774d446439'
+```aW1wb3J0IGJhc2U2NAoKZGVmIGhleF90b19iYXNlNjQoZGF0YTogc3RyKSAtPiBzdHI6CglyYWlz
+ZSBOb3RJbXBsZW1lbnRlZEVycm9yCgpkZWYgYmFzZTY0X3RvX3N0cmluZyhkYXRhOiBzdHIpIC0+
+IHN0cjoKCXJhaXNlIE5vdEltcGxlbWVudGVkRXJyb3IKCmZsYWdfZW5jb2RlZCA9ICc1MjZiNzg0
+MjUyMzM3NDRmNTY1NTc0NGE1MTY5MzE1MTU1NmI0NjQ0NTI1MzMwNzc0ZDQ0NjQzOScKCg==
+```
+4. Dekódování řetězce From Hex a From base64
+```526b78425233744f5655744a51693151556b4644525330774d446439``` 
+
+> FLAG{NUKIB-PRACE-007}
+
+## /13 Adresní řetězec
 
 1. Ještě jsem našel ve zdroj kodu stránky tenhle řetězec, ale už nebyl čas zkoumat ho dal...
 `\001F\008B\0008\0000\00AA\007C\0076\0061\0000\00FF\0005\0080\0041\0009\0000\0000\0008\0003\0013\0019\0042\0050\000F\00C1\00C7\00DE\00F6\000F\0032\00E6\0092\00E0\0057\00EA\0032\0005\006F\0075\00F3\000C\0000\0000\0000`
+
+## /14,15 WOFF2
+1. Na web jsou nahrána data přes rc Woff2 (2 odkazy)
+
