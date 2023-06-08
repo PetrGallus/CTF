@@ -21,8 +21,9 @@ V komentáři je skryt flag
 > FLAG-TAKY-LEHKE
 
 ## 4 Prohledání kódu stránky 2
-Ctrl+Shift+I, Ctrl+F a najít flag
-Název CSS fontu
+1. F12 - Style Editor - @font-face
+    `fKFkRkzXRJqcHSLAj5EDoaW.woff2`
+2. CyberChef - `fKFkRkzXRJqcHSLAj5EDoaW` -> from Base58
 
 > FLAG-ZNAS-BASE58?
 
@@ -95,10 +96,10 @@ DECIMAL       HEXADECIMAL     DESCRIPTION
 > FLAG-Posli-zivotopis-na-analyticke-oddeleni
 
 ## 11 Mini-ikona stránky
-1. Obsah faviconu loga na stránce
-2. F12 - Cources - 7. řádek 
-    ```content="https://repository-images.githubusercontent.com/205122635/b416e9be-414e-44b3-a1ac-a3729edfe572"```
-3. Otevřít nalezenou URL a stáhnout mini-ikonu stránky
+Obsah faviconu loga na stránce
+1. F12 - Network -  favicon.png
+2. Stahnout "favicon.png"
+3. `strings favicon.png` nebo `xxd favicon.png`
 
 > FLAG-FAVICON
 
@@ -130,11 +131,13 @@ MjUyMzM3NDRmNTY1NTc0NGE1MTY5MzE1MTU1NmI0NjQ0NTI1MzMwNzc0ZDQ0NjQzOScKCg==
 
 > FLAG{NUKIB-PRACE-007}
 
-## /13 Adresní řetězec
+## 13 Adresní řetězec
 
-1. Ještě jsem našel ve zdroj kodu stránky tenhle řetězec, ale už nebyl čas zkoumat ho dal...
+1. Zdroj kod stránky: 
 `\001F\008B\0008\0000\00AA\007C\0076\0061\0000\00FF\0005\0080\0041\0009\0000\0000\0008\0003\0013\0019\0042\0050\000F\00C1\00C7\00DE\00F6\000F\0032\00E6\0092\00E0\0057\00EA\0032\0005\006F\0075\00F3\000C\0000\0000\0000`
+2. Prevedeni do hex formatu 
+`0x1F 0x8B 0x08 0x00 0xAA 0x7C 0x76 0x61 0x00 0xFF 0x05 0x80 0x41 0x09 0x00 0x00 0x08 0x03 0x13 0x19 0x42 0x50 0x0F 0xC1 0xC7 0xDE 0xF6 0x0F 0x32 0xE6 0x92 0xE0 0x57 0xEA 0x32 0x05 0x6F 0x75 0xF3 0x0C 0x00 0x00 0x00`
+3. CyberChef: From hex + Gunzip
 
-## /14,15 WOFF2
-1. Na web jsou nahrána data přes rc Woff2 (2 odkazy)
+> FLAG-GZIPPED
 
