@@ -1,6 +1,7 @@
 # NUKIB challenge
 https://nukib.github.io/salina.html
 
+Pocet nalezenych flagu: 🚀 14 🚀 
 
 ## 1 Kód na stránce
 1. `NDYgNGMgNDEgNDcgMmQgNTQgNGYgNDggNGMgNDUgMmQgNGEgNDUgMmQgNGEgNDUgNGUgMmQgNWEgNDEgNDMgNDEgNTQgNDUgNGI=`
