@@ -103,7 +103,24 @@ Obsah faviconu loga na stránce
 
 > FLAG-FAVICON
 
-## 12 PGP signature
+## 12 Odkaz na pozici analytika
+1. `Analytik síťového provozu – budeš vyšetřovat útoky a hledat škodlivé aktivity v síťových záznamech.`
+2. Odkay na pozici -> https://www.nukib.cz/cs/o-nukib/kariera/analytik-sitoveho-provozu/?ex=RkxBRy1leGZpbHRyYWNlLWRhdC1qZS1tb3puYS1pLXByZXMtZ2V0LXBhcmFtZXRyLW5hcHJpa2xhZC12LW9ka2F6dS0temt1cy1wcmFjaS12LU9BU1Ah
+3. CyberChef: From Base64 `RkxBRy1leGZpbHRyYWNlLWRhdC1qZS1tb3puYS1pLXByZXMtZ2V0LXBhcmFtZXRyLW5hcHJpa2xhZC12LW9ka2F6dS0temt1cy1wcmFjaS12LU9BU1Ah`
+
+> FLAG-exfiltrace-dat-je-mozna-i-pres-get-parametr-napriklad-v-odkazu--zkus-praci-v-OASP!
+
+## 13 Adresní řetězec
+
+1. Zdroj kod stránky: 
+`\001F\008B\0008\0000\00AA\007C\0076\0061\0000\00FF\0005\0080\0041\0009\0000\0000\0008\0003\0013\0019\0042\0050\000F\00C1\00C7\00DE\00F6\000F\0032\00E6\0092\00E0\0057\00EA\0032\0005\006F\0075\00F3\000C\0000\0000\0000`
+2. Prevedeni do hex formatu 
+`0x1F 0x8B 0x08 0x00 0xAA 0x7C 0x76 0x61 0x00 0xFF 0x05 0x80 0x41 0x09 0x00 0x00 0x08 0x03 0x13 0x19 0x42 0x50 0x0F 0xC1 0xC7 0xDE 0xF6 0x0F 0x32 0xE6 0x92 0xE0 0x57 0xEA 0x32 0x05 0x6F 0x75 0xF3 0x0C 0x00 0x00 0x00`
+3. CyberChef: From hex + Gunzip
+
+> FLAG-GZIPPED
+
+## 14 PGP signature
 1. na web je nahraná složka .well-known, jejíž obsahem je soubor "security.txt" (https://github.com/NUKIB/nukib.github.io/blob/master/.well-known/security.txt)
 2. PGP podpis obsahuje flag
 ```-----BEGIN PGP SIGNED MESSAGE-----
@@ -130,14 +147,3 @@ MjUyMzM3NDRmNTY1NTc0NGE1MTY5MzE1MTU1NmI0NjQ0NTI1MzMwNzc0ZDQ0NjQzOScKCg==
 ```526b78425233744f5655744a51693151556b4644525330774d446439``` 
 
 > FLAG{NUKIB-PRACE-007}
-
-## 13 Adresní řetězec
-
-1. Zdroj kod stránky: 
-`\001F\008B\0008\0000\00AA\007C\0076\0061\0000\00FF\0005\0080\0041\0009\0000\0000\0008\0003\0013\0019\0042\0050\000F\00C1\00C7\00DE\00F6\000F\0032\00E6\0092\00E0\0057\00EA\0032\0005\006F\0075\00F3\000C\0000\0000\0000`
-2. Prevedeni do hex formatu 
-`0x1F 0x8B 0x08 0x00 0xAA 0x7C 0x76 0x61 0x00 0xFF 0x05 0x80 0x41 0x09 0x00 0x00 0x08 0x03 0x13 0x19 0x42 0x50 0x0F 0xC1 0xC7 0xDE 0xF6 0x0F 0x32 0xE6 0x92 0xE0 0x57 0xEA 0x32 0x05 0x6F 0x75 0xF3 0x0C 0x00 0x00 0x00`
-3. CyberChef: From hex + Gunzip
-
-> FLAG-GZIPPED
-
